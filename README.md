@@ -1,3 +1,3 @@
-# Useful-C-Code
-Useful C Code
-* Binary Search Tree
+# Useful-Algorithm
+Useful Algorithms
+* `C`: Binary Search Tree
