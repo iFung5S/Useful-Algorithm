@@ -1,5 +1,4 @@
-# Useful-Algorithm
-Useful Algorithms
-* `C`: [Binary Search Tree](Binary-Search-Tree)
-
+# Useful Algorithms
 [LICENSE](LICENSE)
+## Binary Search Tree
+* [`C`](Binary-Search-Tree)
