@@ -10,34 +10,34 @@ public class BinarySearchTree<Type extends Comparable<Type>>
   public BinarySearchTree()
   {
     setEmpty();
-  }
+  } // BinarySearchTree
 
   private void setEmpty()
   {
     empty = true;
     left = null;
     right = null;
-  }
+  } // setEmpty
 
   public boolean isEmpty()
   {
     return empty;
-  }
+  } // isEmpty
 
   public Type getValue()
   {
     return value;
-  }
+  } // getValue
 
   public BinarySearchTree<Type> getLeft()
   {
     return left;
-  }
+  } // getLeft
 
   public BinarySearchTree<Type> getRight()
   {
     return right;
-  }
+  } // getRight
 
   private void setValue(Type requiredValue)
   {
@@ -48,7 +48,7 @@ public class BinarySearchTree<Type extends Comparable<Type>>
       right = new BinarySearchTree<Type>();
     }
     value = requiredValue;
-  }
+  } // setValue
 
   public void insert(Type insertValue)
   {
@@ -58,7 +58,7 @@ public class BinarySearchTree<Type extends Comparable<Type>>
       left.insert(insertValue);
     else
       right.insert(insertValue);
-  }
+  } // insert
 
   public boolean find(Type findValue)
   {
@@ -70,7 +70,17 @@ public class BinarySearchTree<Type extends Comparable<Type>>
       return left.find(findValue);
     else
       return right.find(findValue);
-  }
+  } // find
+
+  public void print()
+  {
+    if (!left.isEmpty())
+      left.print();
+    if (!empty)
+      System.out.println(value.toString());
+    if (!right.isEmpty())
+      right.print();
+  } // print
 
   public int getSize()
   {
@@ -78,7 +88,7 @@ public class BinarySearchTree<Type extends Comparable<Type>>
       return 0;
     else
       return (left.getSize() + 1 + right.getSize());
-  }
+  } // getSize
 
   public int getDepth()
   {
@@ -93,17 +103,17 @@ public class BinarySearchTree<Type extends Comparable<Type>>
       else
         return rightDepth + 1;
     }
-  }
+  } // getDepth
 
   @Override
   public int compareTo(BinarySearchTree<Type> other)
   {
     return this.getValue().compareTo(other.getValue());
-  }
+  } // compareTo
 
   public boolean equals(BinarySearchTree<Type> other)
   {
     return this.getValue().equals(other.getValue());
-  }
+  } // equals
 
-}
+} // class BinarySearchTree
